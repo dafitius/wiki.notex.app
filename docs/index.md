@@ -17,44 +17,40 @@ This can be changed by adding an output path:
 -output_path <output path>
 ```
 
-##### Filters
+#### Filters
 It is also possible to filter the files to be extacted. This filter can be a file extension or file hash:
 ```
 -filter <filter>
 ```
+
 It is possible to filter more than 1 thing. By using a comma to separate the filter:
 ```
 -filter <filter>,<filter>,<filter>
 ```
-
 To filter on a specific thing inside a file you can use the search commands:
 ```
 -hex_search <hex string>
 -regex_search <regex>
 -text_search <text string>
 ```
-to use the search commands you'll need to specify an archive to search in, this can be done with:
+To use the search commands you'll need to specify an archive to search in, this can be done with:
 ```
 -search_rpkg <path to rpkg file>
 ```
 
-### viewing dependencies
+### Viewing Dependencies
 Dependencies can be viewed with:
 ```
 -filter <file hash> -hash_depends <path to runtime folder>
 ```
 
-
-**example of search command:**
+**Example of search command:**
 this command will search for files with an ORES or JSON extension that contain the word *brick*.
 ```
-rpkg.exe -filter ORES,JSON -regex_search "brick" -search_rpkg "C:\Program Files\Epic Games\HITMAN3\Runtime\chunk0.rpkg"
+-filter ORES,JSON -regex_search "brick" -search_rpkg "C:\Program Files\Epic Games\HITMAN3\Runtime\chunk0.rpkg"
 ```
 ### Generating Archives
 //todo
-
-
-
 
 ## Advanced Usage
 ### Game Localisation
